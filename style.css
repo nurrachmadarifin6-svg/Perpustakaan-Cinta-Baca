@@ -1,0 +1,436 @@
+/* =====================================================
+   SUPER PREMIUM UI – FULL SYSTEM
+   Glassmorphism + Neo Gradient Blue + Glow Motion
+   by Mengare IT
+===================================================== */
+
+/* ------------------ GLOBAL ------------------ */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: linear-gradient(145deg, #e9eff7, #d4deea);
+  color: #2a2a2a;
+  line-height: 1.7;
+  overflow-x: hidden;
+  padding-bottom: 30px;
+  animation: fadeAll 0.6s ease;
+}
+
+@keyframes fadeAll {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* =====================================================
+   HEADER PREMIUM
+===================================================== */
+header {
+  background: linear-gradient(135deg, #0047a4, #007dff);
+  padding: 35px;
+  color: white;
+  text-align: center;
+  font-size: 2.2rem;
+  letter-spacing: 1px;
+  font-weight: 800;
+  border-bottom: 4px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15),
+    inset 0 -10px 25px rgba(255, 255, 255, 0.2);
+  position: relative;
+  overflow: hidden;
+}
+
+/* kilau gerak */
+header::before {
+  content: "";
+  position: absolute;
+  width: 160%;
+  height: 200%;
+  top: -50%;
+  left: -30%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.25),
+    transparent 70%
+  );
+  animation: shineHeader 12s linear infinite;
+}
+@keyframes shineHeader {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* =====================================================
+   NAVBAR PREMIUM GLASS
+===================================================== */
+nav {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004aad;
+  padding: 10px 22px;
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: 0.35s;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav a:hover,
+nav a.active {
+  background: #0058d0;
+  color: white;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15), 0 0 12px rgba(0, 130, 255, 0.58);
+  transform: translateY(-2px);
+}
+
+/* =====================================================
+   PAGE TRANSITION
+===================================================== */
+section {
+  display: none;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.45s ease;
+}
+
+section.active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.container {
+  padding: 40px 22px;
+  max-width: 1250px;
+  margin: auto;
+}
+
+/* =====================================================
+   BERANDA – HERO SUPER PREMIUM
+===================================================== */
+
+.beranda {
+  padding-top: 25px;
+}
+
+.hero {
+  background: linear-gradient(135deg, #003b8e, #047bff, #00c2ff);
+  padding: 70px 35px;
+  color: white;
+  border-radius: 25px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18),
+    inset 0 0 40px rgba(255, 255, 255, 0.15), 0 0 60px rgba(0, 153, 255, 0.55);
+
+  animation: heroPop 1s ease forwards;
+}
+
+@keyframes heroPop {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* kilau */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -80%;
+  left: -60%;
+  width: 220%;
+  height: 260%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.22),
+    transparent 60%
+  );
+  animation: shineHero 15s linear infinite;
+}
+@keyframes shineHero {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.hero h2 {
+  font-size: 2.4rem;
+  font-weight: 800;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  opacity: 0.96;
+}
+
+/* =====================================================
+   FITUR CARD SUPER PREMIUM
+===================================================== */
+.fitur-wrapper {
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.fitur-card {
+  background: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(14px);
+  padding: 28px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12),
+    inset 0 0 14px rgba(255, 255, 255, 0.3);
+
+  transition: 0.4s ease;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+
+/* garis glow dinamis */
+.fitur-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -40%;
+  width: 180%;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #00c4ff, transparent);
+  animation: glowLine 4s infinite linear;
+}
+
+@keyframes glowLine {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(50%);
+  }
+}
+
+.fitur-card h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #004aad;
+  margin-bottom: 12px;
+}
+
+.fitur-card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2), 0 0 35px rgba(0, 150, 255, 0.5);
+  background: rgba(255, 255, 255, 0.45);
+}
+
+/* =====================================================
+   INFO SECTION
+===================================================== */
+.info {
+  margin-top: 45px;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 35px;
+  border-radius: 22px;
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12),
+    inset 0 0 18px rgba(255, 255, 255, 0.25);
+}
+
+.info h3 {
+  font-size: 1.7rem;
+  margin-bottom: 15px;
+  color: #003d80;
+}
+
+.info p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+}
+
+/* =====================================================
+   TABLE SUPER PREMIUM
+===================================================== */
+.tabel {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.88);
+  border-radius: 16px;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+.tabel th {
+  background: linear-gradient(135deg, #004aad, #0073e6);
+  color: white;
+  padding: 15px;
+  font-size: 1.05rem;
+  border: none;
+}
+
+.tabel td {
+  padding: 14px;
+  border-bottom: 1px solid #ececec;
+}
+
+.tabel tr:hover {
+  background: #f0f6ff;
+}
+
+/* =====================================================
+   FORM SUPER PREMIUM
+===================================================== */
+.form {
+  background: rgba(255, 255, 255, 0.85);
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  backdrop-filter: blur(10px);
+  max-width: 650px;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 15px;
+  border-radius: 14px;
+  border: 1px solid #c6d3e2;
+  background: #f8fbff;
+  font-size: 1rem;
+  transition: 0.3s ease;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #0066ff;
+  box-shadow: 0 0 0 4px rgba(0, 115, 255, 0.22);
+  background: #fff;
+}
+
+.form label {
+  font-weight: 600;
+  margin-bottom: 6px;
+  display: block;
+}
+
+/* =====================================================
+   BUTTON SUPER PREMIUM
+===================================================== */
+.btn {
+  background: linear-gradient(135deg, #0047a4, #007dff);
+  padding: 14px;
+  border-radius: 50px;
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  width: 100%;
+  cursor: pointer;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2), 0 0 18px rgba(0, 125, 255, 0.5);
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+/* =====================================================
+   FOOTER SUPER PREMIUM
+===================================================== */
+footer {
+  background: #004aad;
+  padding: 22px;
+  text-align: center;
+  color: white;
+  margin-top: 50px;
+  font-size: 1rem;
+  border-top: 4px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 -8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* =====================================================
+   RESPONSIVE DESIGN
+===================================================== */
+
+/* Tablet */
+@media (max-width: 900px) {
+  .fitur-wrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .hero h2 {
+    font-size: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+  header {
+    font-size: 1.6rem;
+    padding: 25px;
+  }
+  nav a {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+  .fitur-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+  .tabel th,
+  .tabel td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+}

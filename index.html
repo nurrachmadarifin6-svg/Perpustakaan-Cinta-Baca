@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Perpustakaan Cinta Baca</title>
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      /* Semua section disembunyikan */
+      section {
+        display: none;
+      }
+
+      /* Section aktif tampil */
+      section.active {
+        display: block;
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>Perpustakaan Cinta Baca</h1>
+    </header>
+
+    <nav>
+      <ul>
+        <li>
+          <a href="#beranda" data-page="beranda" class="active">Beranda</a>
+        </li>
+        <li><a href="#koleksi" data-page="koleksi">Koleksi Buku</a></li>
+        <li><a href="#pinjam" data-page="pinjam">Peminjaman Buku</a></li>
+        <li><a href="#kembali" data-page="kembali">Pengembalian Buku</a></li>
+        <li><a href="#kontak" data-page="kontak">Kontak</a></li>
+      </ul>
+    </nav>
+
+    <!-- ======================= HALAMAN BERANDA ======================= -->
+    <section id="beranda" class="active container beranda">
+      <div class="hero">
+        <h2>📚 Selamat Datang di Perpustakaan Cinta Baca</h2>
+        <p>
+          Tempat terbaik untuk menemukan berbagai koleksi buku yang bermanfaat.
+        </p>
+      </div>
+
+      <div class="fitur-wrapper">
+        <div class="fitur-card">
+          <h3>📘 Koleksi Buku Lengkap</h3>
+          <p>
+            Ratusan buku dari berbagai kategori untuk menunjang pengetahuan dan
+            literasi.
+          </p>
+        </div>
+
+        <div class="fitur-card">
+          <h3>📖 Peminjaman Mudah</h3>
+          <p>
+            Proses peminjaman cepat, praktis, dan tercatat otomatis di sistem
+            kami.
+          </p>
+        </div>
+
+        <div class="fitur-card">
+          <h3>📦 Pengembalian Tertata</h3>
+          <p>
+            Data pengembalian buku dicatat rapi dan disesuaikan dengan data buku milik kami.
+          </p>
+        </div>
+      </div>
+
+      <div class="info">
+        <h3>🏛 Tentang Perpustakaan</h3>
+        <p>
+          Perpustakaan Cinta Baca hadir untuk meningkatkan minat baca masyarakat
+          dengan menyediakan koleksi buku terbaru, layanan peminjaman, dan
+          sistem digital yang mudah digunakan.
+        </p>
+      </div>
+    </section>
+
+    <!-- ======================= HALAMAN KOLEKSI ======================= -->
+    <section id="koleksi" class="container page">
+      <h2>📚 Koleksi Buku</h2>
+      <p>Berikut daftar lengkap koleksi buku perpustakaan.</p>
+
+      <table id="table-buku" class="tabel">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nomor Buku</th>
+            <th>Nomor Panggil</th>
+            <th>ISBN</th>
+            <th>Kategori</th>
+            <th>Judul Buku</th>
+            <th>Subyek</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ======================= HALAMAN PINJAM ======================= -->
+    <!-- ======================= HALAMAN PINJAM ======================= -->
+    <section id="pinjam" class="container page">
+      <h2>📖 Form Peminjaman Buku</h2>
+
+      <form id="formPinjam" class="form">
+        <label>Nama Peminjam</label>
+        <input
+          type="text"
+          id="pinjamNama"
+          placeholder="Masukkan Nama"
+          required
+        />
+
+        <label>Judul Buku</label>
+        <input type="text" id="pinjamJudul" placeholder="Judul Buku" required />
+
+        <label>Tanggal Pinjam</label>
+        <input type="date" id="pinjamTanggal" required />
+
+        <button class="btn" type="submit">Simpan Peminjaman</button>
+      </form>
+
+      <h3 style="margin-top: 40px">📋 Data Peminjaman</h3>
+
+      <table id="table-pinjam" class="tabel">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Judul Buku</th>
+            <th>Tanggal Pinjam</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ======================= HALAMAN KEMBALI ======================= -->
+    <section id="kembali" class="container page">
+      <h2>📦 Form Pengembalian Buku</h2>
+
+      <form id="formKembali" class="form">
+        <label>Nama Pengembali</label>
+        <input
+          type="text"
+          id="kembaliNama"
+          placeholder="Masukkan Nama"
+          required
+        />
+
+        <label>Judul Buku</label>
+        <input
+          type="text"
+          id="kembaliJudul"
+          placeholder="Judul Buku"
+          required
+        />
+
+        <label>Tanggal Kembali</label>
+        <input type="date" id="kembaliTanggal" required />
+
+        <button type="submit" class="btn">Simpan Pengembalian</button>
+      </form>
+
+      <h3 style="margin-top: 40px">📋 Data Pengembalian</h3>
+
+      <table id="table-kembali" class="tabel">
+        <thead>
+          <tr>
+            <th>No</th>
+            <th>Nama</th>
+            <th>Judul Buku</th>
+            <th>Tanggal Kembali</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </section>
+
+    <!-- ======================= HALAMAN KONTAK ======================= -->
+    <section id="kontak" class="container">
+      <h2>Kontak</h2>
+      <p>Email: perpustakaan@cintabaca.id</p>
+      <p>Telepon: +62 812-3456-7890</p>
+
+      <form class="form">
+        <label>Nama:</label>
+        <input type="text" />
+        <label>Email:</label>
+        <input type="email" />
+        <label>Pesan:</label>
+        <textarea></textarea>
+        <button class="btn">Kirim</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+
+    <footer>&copy; 2025 Perpustakaan Cinta Baca — Mengare IT</footer>
+  </body>
+</html>
